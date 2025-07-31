@@ -1,26 +1,30 @@
 
 
 import './App.css'
-// function  Card(){
+
+// const Card=({title})=>{
 //   return(<>
-//   <h2>Card component</h2>
-  
-//   </>)
+//   <div className='card'>{title}</div></>)
 // }
-const Card=()=>{
-  return(<>
-  <h2>Card component testing</h2></>)
+function renderStatus(status){
+  if(status==='online'){
+    return<p>🟢 Online</p>
+  }
+  if(status==='offline'){
+    return <p>🔴 Offline</p>;
+  }
+  //return default value
+  return <p>⚪ Unknown</p>;
 }
 function App() {
-
-
   return (
     <>
-<h1>Hello World from React developer</h1>
-<Card/>
-<Card/>
+<div>
+  {renderStatus('online')}
+  {renderStatus('offline')}
+  {renderStatus('busy')}
 
-
+</div>
     </>
   )
 }
