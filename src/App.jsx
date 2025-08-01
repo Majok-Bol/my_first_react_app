@@ -1,32 +1,21 @@
 
 
 import './App.css'
-
-// const Card=({title})=>{
-//   return(<>
-//   <div className='card'>{title}</div></>)
-// }
-function renderStatus(status){
-  if(status==='online'){
-    return<p>🟢 Online</p>
-  }
-  if(status==='offline'){
-    return <p>🔴 Offline</p>;
-  }
-  //return default value
-  return <p>⚪ Unknown</p>;
+const FruitsList=()=>{
+  const fruits=['apple','banana','cherry','pears','pineapple','passion','mangoes','watermelon','tomatoes','onions','carrots'];
+  //render in the ui 
+  //list the items
+  return<ul>{fruits.map((fruit,index)=>{
+    //get fruit name
+    //index
+    console.log(`Fruit name: ${fruit},Index: ${index}`)
+  return<li key={`${fruit}-${index}`}>{fruit}</li>})}</ul>
 }
-function App() {
-  return (
-    <>
-<div>
-  {renderStatus('online')}
-  {renderStatus('offline')}
-  {renderStatus('busy')}
-
-</div>
-    </>
-  )
+const App=()=>{
+  return(
+  <>
+  <FruitsList/>
+  
+  </>)
 }
-
 export default App

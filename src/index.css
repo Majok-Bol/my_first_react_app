@@ -4,21 +4,11 @@
   padding:0
 }
 
-.card{
-
-  border: 2px solid black;
-
-  border-radius: 2px;
-  text-align: center;
-  padding:4px;
-  margin:5px;
-
+body{
+  background-color: cyan;
 }
-.heading{
-  font-size: 2rem;
-  font-style: italic;
-}
-.subheading{
-  font-size: 1.5rem;
-
+.listItems{
+  color:black;
+  border:2px solid red;
+  width:200px;
 }
